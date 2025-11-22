@@ -8,6 +8,7 @@
   export let recordPk: string;
 
   $: record = new RecordStore({ table, recordPk });
+  console.log("Record loaded successfully. PK:", recordPk);
   $: schema = table.schema;
   $: database = schema.database;
   $: ({ summary, fetchRequest } = record);
